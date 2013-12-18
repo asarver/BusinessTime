@@ -58,6 +58,7 @@ public class MainActivity extends Activity {
 	            new Intent(this, SmsManager.class), 0);                
 	    SmsManager sms = SmsManager.getDefault();
 	    sms.sendTextMessage(phoneNumber, null, message, pi, null);
+	    Toast.makeText(this, "Text message sent to "+ phoneNumber, Toast.LENGTH_SHORT).show();
 	}
 
 	@Override

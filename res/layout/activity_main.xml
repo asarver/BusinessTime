@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/intro"
         android:layout_alignParentLeft="true"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="400dp"
         android:text="@string/add_new_number"
         android:gravity="center"
         android:textSize="14sp"
@@ -47,18 +47,20 @@
         android:ems="10"
         android:gravity="center"
         android:inputType="phone"
-        android:textColor="#ffffff" >
+        android:textColor="#ffffff">
 
         <requestFocus />
     </EditText>
 
-    <Button
+    <ImageView
         android:id="@+id/button1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/phone_number"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/phone_number"
+        android:layout_alignRight="@+id/phone_number"
+        android:layout_marginLeft="5dp"
         android:gravity="center"
-        android:text="@string/select_from_contacts"
-        android:onClick="selectFromContacts" />
+        android:onClick="selectFromContacts"
+        android:src="@drawable/contacts" />
 
 </RelativeLayout>
