@@ -2,19 +2,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="#000000"
     tools:context=".MainActivity" >
     
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"
-        android:background="@color/black"
         android:scaleType="fitCenter"
-        android:src="@drawable/white_logo" />
+        android:src="@drawable/white_logo"
+        android:background="#000000"/>
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/intro"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -25,5 +25,31 @@
         android:gravity="center"
         android:textSize="20sp"
         android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/ask_number"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/intro"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="400dp"
+        android:text="@string/add_new_number"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/phone_number"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ask_number"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="phone"
+        android:textColor="#ffffff" >
+
+        <requestFocus />
+    </EditText>
 
 </RelativeLayout>

@@ -4,5 +4,6 @@
     <string name="app_name">BusinessTime</string>
     <string name="action_settings">Settings</string>
     <string name="intro_string">Welcome to BusinessTime.</string>
+    <string name="add_new_number">Enter in the number you want to notify:</string>
 
 </resources>
