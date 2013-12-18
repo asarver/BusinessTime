@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.telephony.SmsManager;
+import android.telephony.PhoneNumberUtils;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
@@ -54,11 +55,13 @@ public class MainActivity extends Activity {
     } 
 	
 	private void sendSMS(String message, String phoneNumber) {
-		PendingIntent pi = PendingIntent.getActivity(this, 0,
-	            new Intent(this, SmsManager.class), 0);                
-	    SmsManager sms = SmsManager.getDefault();
-	    sms.sendTextMessage(phoneNumber, null, message, pi, null);
-	    Toast.makeText(this, "Text message sent to "+ phoneNumber, Toast.LENGTH_SHORT).show();
+		if (PhoneNumberUtils.isGlobalPhoneNumber(phoneNumber)) {
+			PendingIntent pi = PendingIntent.getActivity(this, 0,
+		            new Intent(this, SmsManager.class), 0);                
+		    SmsManager sms = SmsManager.getDefault();
+		    sms.sendTextMessage(phoneNumber, null, message, pi, null);
+		    Toast.makeText(this, "Text message sent to "+ phoneNumber, Toast.LENGTH_SHORT).show();
+		}
 	}
 
 	@Override
