@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/intro"
         android:layout_alignParentLeft="true"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="350dp"
         android:text="@string/add_new_number"
         android:gravity="center"
         android:textSize="14sp"
@@ -51,5 +51,14 @@
 
         <requestFocus />
     </EditText>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/phone_number"
+        android:gravity="center"
+        android:text="@string/select_from_contacts"
+        android:onClick="selectFromContacts" />
 
 </RelativeLayout>
