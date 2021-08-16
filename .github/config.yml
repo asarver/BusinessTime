@@ -1,2 +1,2 @@
-base: master
-head: stage
+head: master
+base: stage
